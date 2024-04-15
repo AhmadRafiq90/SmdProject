@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="partsDetailVM" type="com.trendysapplication.app.modules.partsdetail.data.viewmodel.PartsDetailVM"/>
+    </data>
+    <FrameLayout android:id="@+id/framePartsDetail"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <FrameLayout android:id="@+id/frameStackarrowdown"
+            android:layout_gravity="center"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_group_129}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_group_129"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearRowarrowdown"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_23pxh"
+                    android:layout_marginStart="@dimen/_23pxh"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageArrowdownOne"
+                        android:layout_height="@dimen/_15pxh"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="@dimen/_17pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_down"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEngine"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_82pxh"
+                        android:layout_marginTop="@dimen/_6pxv"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{partsDetailVM.partsDetailModel.txtEngine}"
+                        style="@style/txtPoppinssemibold18" tools:text="@string/msg_engine_components"/>
+                    <ImageView android:id="@+id/imageShoppingcartfiv"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_marginBottom="@dimen/_3pxv"
+                        android:layout_marginStart="@dimen/_67pxh"
+                        android:layout_width="@dimen/_30pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_shopping_cart_5"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_shopping_cart_5"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </FrameLayout>
+        <LinearLayout android:id="@+id/linearColumnview"
+            android:layout_gravity="bottom|center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_71pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <View android:id="@+id/viewView"
+                android:layout_height="1013dp" android:layout_width="@dimen/_428pxh"/>
+            <LinearLayout android:id="@+id/linearColumnscreensho"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_7pxv"
+                android:paddingEnd="@dimen/_99pxh"
+                android:paddingStart="@dimen/_99pxh"
+                android:paddingTop="@dimen/_7pxv" style="@style/groupStylewhite_A700">
+                <ImageView android:id="@+id/imageScreenshot2021"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_214pxh"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_width="@dimen/_228pxh"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_screenshot_2021_11_16}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_16"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearColumndescripti"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_10pxh"
+                android:paddingStart="@dimen/_10pxh" style="@style/groupStylegray_50">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndftwaterp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4pxh"
+                    android:layout_marginTop="@dimen/_251pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_18pxh"
+                    android:paddingStart="@dimen/_18pxh"
+                    android:paddingTop="@dimen/_14pxv" style="@style/groupStylewhite_A700cornerRadius">
+                    <TextView android:id="@+id/txtDftwaterpump"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_67pxh"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_2pxh"
+                        android:text="@{partsDetailVM.partsDetailModel.txtDftwaterpump}"
+                        style="@style/txtMontserratsemibold17" tools:text="@string/msg_dft_water_pump_aw4126"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_4pxv"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{partsDetailVM.partsDetailModel.txtPrice}"
+                        style="@style/txtPoppinsmedium14" tools:text="@string/lbl_pkr_57000"/>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/frameStackproductdet"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_224pxv"
+                    android:layout_marginTop="@dimen/_9pxv" android:layout_width="@dimen/_406pxh">
+                    <LinearLayout
+                        android:id="@+id/linearColumnproductde"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4pxh"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_19pxh"
+                        android:paddingStart="@dimen/_19pxh"
+                        android:paddingTop="@dimen/_13pxv" style="@style/groupStylewhite_A700cornerRadius">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtProductdetails"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_4pxh"
+                            android:singleLine="true"
+                            android:text="@{partsDetailVM.partsDetailModel.txtProductdetails}"
+                            style="@style/txtMontserratmedium15" tools:text="@string/lbl_product_details"/>
+                        <LinearLayout
+                            android:id="@+id/linearRowparttype"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_11pxh"
+                            android:layout_marginTop="@dimen/_29pxv"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtParttype"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:lineSpacingExtra="@dimen/_4pxh"
+                                android:singleLine="true"
+                                android:text="@{partsDetailVM.partsDetailModel.txtParttype}"
+                                style="@style/txtMontserratsemibold15" tools:text="@string/lbl_part_type"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtOriginal"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_218pxh"
+                                android:layout_width="wrap_content"
+                                android:lineSpacingExtra="@dimen/_4pxh"
+                                android:singleLine="true"
+                                android:text="@{partsDetailVM.partsDetailModel.txtOriginal}"
+                                style="@style/txtMontserratmedium15_1" tools:text="@string/lbl_original"/>
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/linearRowbrand"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_11pxh"
+                            android:layout_marginTop="@dimen/_25pxv"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtBrand"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_1pxv"
+                                android:layout_width="wrap_content"
+                                android:lineSpacingExtra="@dimen/_4pxh"
+                                android:singleLine="true"
+                                android:text="@{partsDetailVM.partsDetailModel.txtBrand}"
+                                style="@style/txtMontserratsemibold15" tools:text="@string/lbl_brand"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtVolkswagen"
+                                android:layout_gravity="bottom"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_212pxh"
+                                android:layout_width="wrap_content"
+                                android:lineSpacingExtra="@dimen/_4pxh"
+                                android:singleLine="true"
+                                android:text="@{partsDetailVM.partsDetailModel.txtVolkswagen}"
+                                style="@style/txtMontserratmedium15_1" tools:text="@string/lbl_volkswagen"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearRowsupplier"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_11pxh"
+                            android:layout_marginTop="@dimen/_26pxv"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtSupplier"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_35pxv"
+                                android:layout_width="wrap_content"
+                                android:lineSpacingExtra="@dimen/_4pxh"
+                                android:singleLine="true"
+                                android:text="@{partsDetailVM.partsDetailModel.txtSupplier}"
+                                style="@style/txtMontserratsemibold15" tools:text="@string/lbl_supplier"/>
+                            <LinearLayout android:gravity="end"
+                                android:id="@+id/linearColumnroyalauto"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_181pxh"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtRoyalauto"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:lineSpacingExtra="@dimen/_4pxh"
+                                    android:singleLine="true"
+                                    android:text="@{partsDetailVM.partsDetailModel.txtRoyalauto}"
+                                    style="@style/txtMontserratmedium15_1" tools:text="@string/lbl_royal_auto"/>
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:id="@+id/btnViewSupplier"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_8pxv"
+                                    android:layout_width="match_parent"
+                                    android:lineSpacingExtra="@dimen/_3pxh"
+                                    android:paddingBottom="@dimen/_6pxv"
+                                    android:paddingEnd="@dimen/_9pxh"
+                                    android:paddingStart="@dimen/_9pxh"
+                                    android:paddingTop="@dimen/_6pxv"
+                                    android:singleLine="true"
+                                    android:text="@string/lbl_view_supplier"
+                                    android:textAllCaps="false"
+                                    style="@style/btnSolidRounded" tools:text="@string/lbl_view_supplier"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearColumnlineten"
+                        android:layout_gravity="top|center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_45pxv"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <View android:background="@color/gray_200"
+                            android:id="@+id/lineLinetenOne"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_405pxh"/>
+                        <View android:background="@color/gray_200"
+                            android:id="@+id/lineLinenineOne"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_1pxv"
+                            android:layout_marginStart="@dimen/_16pxh"
+                            android:layout_marginTop="@dimen/_45pxv" android:layout_width="@dimen/_389pxh"/>
+                        <View android:background="@color/gray_200"
+                            android:id="@+id/lineLinenineThree"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_1pxv"
+                            android:layout_marginStart="@dimen/_16pxh"
+                            android:layout_marginTop="@dimen/_45pxv" android:layout_width="@dimen/_389pxh"/>
+                    </LinearLayout>
+                </FrameLayout>
+                <EditText
+                    android:background="@drawable/rectangle_bg_white_a700_radius_6"
+                    android:drawableStart="@drawable/img_edit_listul"
+                    android:hint="@string/msg_lorem_ipsum_is_simply"
+                    android:id="@+id/etDescription"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7pxv"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_7pxh"
+                    android:paddingBottom="@dimen/_30pxv"
+                    android:paddingEnd="@dimen/_14pxh"
+                    android:paddingStart="@dimen/_13pxh"
+                    android:paddingTop="@dimen/_30pxv"
+                    android:singleLine="true"
+                    android:text="@={partsDetailVM.partsDetailModel.etDescriptionValue}"
+                    android:textColorHint="@color/blue_gray_700_01"
+                    style="@style/etSolidRounded" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <View android:background="@color/blue_gray_100"
+                android:id="@+id/lineLinesixOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_428pxh"/>
+            <View android:id="@+id/viewViewOne"
+                android:layout_height="@dimen/_528pxh" android:layout_width="@dimen/_428pxh"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnAddToCart"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_11pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_11pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_add_to_cart"
+                android:textAllCaps="false" style="@style/btnSolid" tools:text="@string/lbl_add_to_cart"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

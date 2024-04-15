@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="successVM" type="com.abdulsapplication.app.modules.success.data.viewmodel.SuccessVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSuccess"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearColumncheckmark"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_59pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_22pxv"
+            android:paddingEnd="@dimen/_41pxh"
+            android:paddingStart="@dimen/_41pxh"
+            android:paddingTop="@dimen/_22pxv" style="@style/groupStyleamber_1">
+            <ImageView android:id="@+id/imageCheckmarkOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_73pxh"
+                android:layout_width="@dimen/_73pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_checkmark"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtRequestsent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{successVM.successModel.txtRequestsent}"
+                style="@style/txtPoppinsmedium18" tools:text="@string/msg_request_sent_successfully"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnOk"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_38pxv"
+                android:layout_marginBottom="@dimen/_7pxv"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_width="@dimen/_126pxh"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_5pxv"
+                android:singleLine="true" android:text="@string/lbl_ok"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_3" tools:text="@string/lbl_ok"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

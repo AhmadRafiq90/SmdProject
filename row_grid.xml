@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="gridRowModel" type="com.isapplication.app.modules.brand.data.model.GridRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStack"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_21pxv"
+        android:paddingEnd="@dimen/_5pxh"
+        android:paddingStart="@dimen/_5pxh"
+        android:paddingTop="@dimen/_21pxv" style="@style/groupStylecornerRadius">
+        <ImageView android:id="@+id/imageScreenshot2021"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_36pxh"
+            android:layout_width="@dimen/_105pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_screenshot_2021_11_15_36x105"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_15_36x105"/>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="gridscreenshot2RowModel" type="com.isapplication.app.modules.brand.data.model.Gridscreenshot2RowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStackscreenshot"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_25pxv"
+        android:paddingEnd="@dimen/_3pxh"
+        android:paddingStart="@dimen/_3pxh"
+        android:paddingTop="@dimen/_25pxv" style="@style/groupStylecornerRadius">
+        <ImageView android:id="@+id/imageScreenshot2021"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_28pxh"
+            android:layout_width="@dimen/_109pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_screenshot_2021_11_15_28x109"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_15_28x109"/>
+    </FrameLayout>
+</layout>

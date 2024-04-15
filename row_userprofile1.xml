@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="userprofile1RowModel" type="com.project.app.modules.home.data.model.Userprofile1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearUserprofile"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStylewhite_2">
+        <FrameLayout android:id="@+id/frameStack"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_165pxv"
+            android:layout_width="@dimen/_163pxh"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_15pxh"
+            android:paddingStart="@dimen/_15pxh"
+            android:paddingTop="@dimen/_18pxv" style="@style/groupStylegray_50">
+            <ImageView android:id="@+id/imageSteeringWheelIm"
+                android:layout_gravity="bottom|center"
+                android:layout_height="@dimen/_120pxh"
+                android:layout_width="@dimen/_133pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_1057312_a1_670x581}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_1057312_a1_670x581"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtSteeringWheelTe"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{userprofile1RowModel.txtSteeringWheelTe}"
+            style="@style/txtPoppinsmedium11_1" tools:text="@string/msg_steering_wheel_covers"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtDiscountText"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_1pxv"
+            android:paddingEnd="@dimen/_15pxh"
+            android:paddingStart="@dimen/_15pxh"
+            android:paddingTop="@dimen/_1pxv" android:singleLine="true"
+            android:text="@{userprofile1RowModel.txtDiscountText}"
+            style="@style/txtSolid" tools:text="@string/lbl_upto_50_off"/>
+
+        <TextView
+            android:id="@+id/txtPriceText"
+            style="@style/txtPoppinssemibold11_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{userprofile1RowModel.txtPriceText}"
+            tools:text="@string/lbl_140_omr" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnAddToCartButton"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_3pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_3pxv" android:singleLine="true"
+            android:text="@string/lbl_add_to_cart"
+            android:textAllCaps="false" style="@style/btnSolid" tools:text="@string/lbl_add_to_cart"/>
+    </LinearLayout>
+</layout>

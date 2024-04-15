@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="registrationSuccessVM" type="com.project.app.modules.registrationsuccess.data.viewmodel.RegistrationSuccessVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumn"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearColumncheckmark"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_55pxh"
+            android:layout_marginStart="@dimen/_55pxh"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_20pxv"
+            android:paddingEnd="@dimen/_70pxh"
+            android:paddingStart="@dimen/_70pxh"
+            android:paddingTop="@dimen/_20pxv" style="@style/groupStyleamber_500_02cornerRadius">
+            <ImageView android:id="@+id/imageCheckmarkOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_55pxh"
+                android:layout_width="@dimen/_55pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_checkmark"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSuccess"
+                android:layout_gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_27pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{registrationSuccessVM.registrationSuccessModel.txtSuccess}"
+                style="@style/txtPoppinsmedium25" tools:text="@string/lbl_success"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtThankyoufor"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:text="@{registrationSuccessVM.registrationSuccessModel.txtThankyoufor}"
+                style="@style/txtPoppinsmedium14_1" tools:text="@string/msg_thank_you_for_registering"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnOk"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_38pxv"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:layout_marginStart="@dimen/_26pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="@dimen/_126pxh"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_5pxv"
+                android:singleLine="true" android:text="@string/lbl_ok"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_3" tools:text="@string/lbl_ok"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

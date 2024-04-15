@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="uploadOneVM" type="com.abdulsapplication.app.modules.uploadone.data.viewmodel.UploadOneVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearUploadOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearColumnlocation"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_19pxh"
+            android:paddingVertical="@dimen/_19pxv" style="@style/groupStyleamber_500cornerRadius">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLocation"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{uploadOneVM.uploadOneModel.txtLocation}"
+                style="@style/txtPoppinssemibold16" tools:text="@string/lbl_location"/>
+            <Spinner
+                android:background="@drawable/layer_list_bg_white_a700_19_border_gray_700_radius_5"
+                android:gravity="center_horizontal"
+                android:id="@+id/spinnerSelectprovince"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13pxv"
+                android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+            <Spinner
+                android:background="@drawable/layer_list_bg_white_a700_19_border_gray_700_radius_6"
+                android:gravity="center_horizontal"
+                android:id="@+id/spinnerSelectregion"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnOk"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_30pxv"
+                android:layout_marginBottom="@dimen/_8pxv"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="@dimen/_99pxh"
+                android:paddingBottom="@dimen/_4pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_4pxv"
+                android:singleLine="true" android:text="@string/lbl_ok"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_2" tools:text="@string/lbl_ok"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

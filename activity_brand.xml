@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="brandVM" type="com.isapplication.app.modules.brand.data.viewmodel.BrandVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnarrowDownOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowdownOne"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_389pxh"
+                android:layout_marginStart="@dimen/_22pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <FrameLayout android:id="@+id/frameBrand"
+                android:layout_height="1134dp"
+                android:layout_marginEnd="@dimen/_21pxh"
+                android:layout_marginStart="@dimen/_21pxh" android:layout_width="@dimen/_386pxh">
+                <LinearLayout android:id="@+id/linearColumnwhichcard"
+                    android:layout_gravity="top|center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStylewhite_1">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWhichcardo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{brandVM.brandModel.txtWhichcardo}"
+                        style="@style/txtPoppinssemibold22" tools:text="@string/msg_which_car_do_you"/>
+                    <Spinner
+                        android:background="@drawable/layer_list_bg_white_a700_19_border_blue_gray_100_radius_5"
+                        android:id="@+id/spinnerSelect"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+                    <LinearLayout
+                        android:id="@+id/linearRowscreenshot20"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/linearColumnscreensho"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/linearColumnscreensho1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:paddingBottom="@dimen/_5pxv"
+                                android:paddingEnd="@dimen/_17pxh"
+                                android:paddingStart="@dimen/_17pxh"
+                                android:paddingTop="@dimen/_5pxv" style="@style/groupStylecornerRadius">
+                                <ImageView
+                                    android:id="@+id/imageScreenshot2021"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_66pxh"
+                                    android:layout_width="@dimen/_68pxh"
+                                    android:scaleType="fitXY"
+                                    imageRes="@{@drawable/img_screenshot_2021_11_12}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_12"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtVolkswagon"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{brandVM.brandModel.txtVolkswagon}"
+                                    style="@style/txtPoppinsregular13_1" tools:text="@string/lbl_volkswagon"/>
+                            </LinearLayout>
+                            <FrameLayout
+                                android:id="@+id/frameStackscreenshot"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_80pxv"
+                                android:layout_marginTop="@dimen/_15pxv"
+                                android:layout_width="@dimen/_118pxh"
+                                android:paddingBottom="@dimen/_4pxv"
+                                android:paddingEnd="@dimen/_20pxh"
+                                android:paddingStart="@dimen/_20pxh"
+                                android:paddingTop="@dimen/_4pxv" style="@style/groupStylecornerRadius">
+                                <ImageView
+                                    android:id="@+id/imageScreenshot2022"
+                                    android:layout_gravity="center"
+                                    android:layout_height="@dimen/_70pxh"
+                                    android:layout_width="@dimen/_75pxh"
+                                    android:scaleType="fitXY"
+                                    imageRes="@{@drawable/img_screenshot_2021_11_15}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_15"/>
+                            </FrameLayout>
+                            <FrameLayout
+                                android:id="@+id/frameStackscreenshot1"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_80pxv"
+                                android:layout_marginTop="@dimen/_18pxv"
+                                android:layout_width="@dimen/_118pxh"
+                                android:paddingBottom="@dimen/_4pxv"
+                                android:paddingEnd="@dimen/_20pxh"
+                                android:paddingStart="@dimen/_20pxh"
+                                android:paddingTop="@dimen/_4pxv" style="@style/groupStylecornerRadius">
+                                <ImageView
+                                    android:id="@+id/imageScreenshot2023"
+                                    android:layout_gravity="center"
+                                    android:layout_height="@dimen/_70pxh"
+                                    android:layout_width="@dimen/_75pxh"
+                                    android:scaleType="fitXY"
+                                    imageRes="@{@drawable/img_screenshot_2021_11_15}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_15"/>
+                                <ImageView
+                                    android:id="@+id/imageScreenshot2024"
+                                    android:layout_gravity="center"
+                                    android:layout_height="@dimen/_70pxh"
+                                    android:layout_width="@dimen/_74pxh"
+                                    android:scaleType="fitXY"
+                                    imageRes="@{@drawable/img_screenshot_2021_11_12_70x74}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_12_70x74"/>
+                            </FrameLayout>
+                            <FrameLayout
+                                android:id="@+id/frameStackscreenshot2"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_80pxv"
+                                android:layout_marginTop="@dimen/_18pxv"
+                                android:layout_width="@dimen/_118pxh"
+                                android:paddingBottom="@dimen/_10pxv"
+                                android:paddingEnd="@dimen/_5pxh"
+                                android:paddingStart="@dimen/_5pxh"
+                                android:paddingTop="@dimen/_10pxv" style="@style/groupStylecornerRadius">
+                                <ImageView
+                                    android:id="@+id/imageScreenshot2025"
+                                    android:layout_gravity="center"
+                                    android:layout_height="@dimen/_58pxh"
+                                    android:layout_width="@dimen/_105pxh"
+                                    android:scaleType="fitXY"
+                                    imageRes="@{@drawable/img_screenshot_2021_11_15_58x105}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_15_58x105"/>
+                            </FrameLayout>
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/linearColumn"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16pxh"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <LinearLayout
+                                android:gravity="center_vertical"
+                                android:id="@+id/linearRowscreenshot21"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="horizontal">
+                                <LinearLayout
+                                    android:id="@+id/linearColumnscreensho2"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingHorizontal="@dimen/_5pxh"
+                                    android:paddingVertical="@dimen/_5pxv" style="@style/groupStylecornerRadius">
+                                    <ImageView
+                                    android:id="@+id/imageScreenshot2026"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_57pxh"
+                                    android:layout_marginTop="@dimen/_4pxv"
+                                    android:layout_width="@dimen/_106pxh"
+                                    android:scaleType="fitXY"
+                                    imageRes="@{@drawable/img_screenshot_2021_11_12_57x106}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_12_57x106"/>
+                                    <TextView android:ellipsize="end"
+                                    android:id="@+id/txtHyundai"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5pxv"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{brandVM.brandModel.txtHyundai}"
+                                    style="@style/txtPoppinsregular13_1" tools:text="@string/lbl_hyundai"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/linearColumnscreensho3"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_16pxh"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingHorizontal="@dimen/_4pxh"
+                                    android:paddingVertical="@dimen/_4pxv" style="@style/groupStylecornerRadius">
+                                    <ImageView
+                                    android:id="@+id/imageScreenshot2027"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_64pxh"
+                                    android:layout_marginTop="@dimen/_2pxv"
+                                    android:layout_width="@dimen/_108pxh"
+                                    android:scaleType="fitXY"
+                                    imageRes="@{@drawable/img_screenshot_2021_11_12_64x108}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_12_64x108"/>
+                                    <TextView android:ellipsize="end"
+                                    android:id="@+id/txtToyota"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_2pxv"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{brandVM.brandModel.txtToyota}"
+                                    style="@style/txtPoppinsregular13_1" tools:text="@string/lbl_toyota"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:gravity="center_horizontal"
+                                android:id="@+id/recyclerGridscreenshot2"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_15pxv"
+                                android:layout_width="match_parent"
+                                android:nestedScrollingEnabled="false"
+                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                app:spanCount="2"
+                                itemSpace="@{@dimen/_16pxh}"
+                                tools:itemCount="6" tools:listitem="@layout/row_gridscreenshot2"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerGrid"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18pxv"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3" itemSpace="@{@dimen/_16pxh}"
+                        tools:itemCount="9" tools:listitem="@layout/row_grid"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearColumnscreensho4"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/linearRowscreenshot22"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <FrameLayout
+                            android:id="@+id/frameStackscreenshot3"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_80pxv"
+                            android:layout_width="@dimen/_118pxh"
+                            android:paddingBottom="@dimen/_22pxv"
+                            android:paddingEnd="@dimen/_5pxh"
+                            android:paddingStart="@dimen/_5pxh"
+                            android:paddingTop="@dimen/_22pxv" style="@style/groupStylecornerRadius">
+                            <ImageView
+                                android:id="@+id/imageScreenshot2028"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_33pxh"
+                                android:layout_width="@dimen/_105pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_screenshot_2021_11_15_33x105"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_15_33x105"/>
+                        </FrameLayout>
+                        <FrameLayout
+                            android:id="@+id/frameStackscreenshot4"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_80pxv"
+                            android:layout_marginStart="@dimen/_16pxh"
+                            android:layout_width="@dimen/_118pxh"
+                            android:paddingHorizontal="@dimen/_10pxh"
+                            android:paddingVertical="@dimen/_10pxv" style="@style/groupStylecornerRadius">
+                            <ImageView
+                                android:id="@+id/imageScreenshot2029"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_57pxh"
+                                android:layout_width="@dimen/_96pxh"
+                                android:scaleType="fitXY"
+                                imageRes="@{@drawable/img_screenshot_2021_11_15_57x96}"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_15_57x96"/>
+                        </FrameLayout>
+                        <FrameLayout
+                            android:id="@+id/frameStackscreenshot5"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_80pxv"
+                            android:layout_marginStart="@dimen/_16pxh"
+                            android:layout_width="@dimen/_118pxh"
+                            android:paddingBottom="@dimen/_9pxv"
+                            android:paddingEnd="@dimen/_21pxh"
+                            android:paddingStart="@dimen/_21pxh"
+                            android:paddingTop="@dimen/_9pxv" style="@style/groupStylecornerRadius">
+                            <ImageView
+                                android:id="@+id/imageScreenshot2030"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_59pxh"
+                                android:layout_width="@dimen/_73pxh"
+                                android:scaleType="fitXY"
+                                imageRes="@{@drawable/img_screenshot_2021_11_15_59x73}"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_15_59x73"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameStackscreenshot6"
+                        android:layout_height="@dimen/_80pxv"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="@dimen/_118pxh"
+                        android:paddingBottom="@dimen/_21pxv"
+                        android:paddingEnd="@dimen/_12pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_21pxv" style="@style/groupStylecornerRadius">
+                        <ImageView android:id="@+id/imageScreenshot2031"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_35pxh"
+                            android:layout_width="@dimen/_92pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_screenshot_2021_11_12_35x92"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_12_35x92"/>
+                    </FrameLayout>
+                    <FrameLayout android:id="@+id/frameStackscreenshot7"
+                        android:layout_height="@dimen/_80pxv"
+                        android:layout_marginTop="@dimen/_71pxv"
+                        android:layout_width="@dimen/_118pxh"
+                        android:paddingBottom="@dimen/_21pxv"
+                        android:paddingEnd="@dimen/_12pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_21pxv" style="@style/groupStylecornerRadius">
+                        <ImageView android:id="@+id/imageScreenshot2032"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_35pxh"
+                            android:layout_width="@dimen/_92pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_screenshot_2021_11_12_35x92"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_12_35x92"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

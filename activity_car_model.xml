@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="carModelVM" type="com.abdulsapplication.app.modules.carmodel.data.viewmodel.CarModelVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnarrowDownOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowarrowdown"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_17pxv"
+                android:layout_marginEnd="@dimen/_29pxh"
+                android:layout_marginStart="@dimen/_22pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowdownOne"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginBottom="@dimen/_5pxv"
+                    android:layout_width="@dimen/_17pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_down"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCancel"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_302pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{carModelVM.carModelModel.txtCancel}"
+                    style="@style/txtPoppinsmedium16" tools:text="@string/lbl_cancel"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <FrameLayout android:id="@+id/frameCarmodel"
+                android:layout_height="@dimen/_986pxv"
+                android:layout_marginStart="@dimen/_22pxh" android:layout_width="@dimen/_406pxh">
+                <LinearLayout android:id="@+id/linearColumnwhichhyun"
+                    android:layout_gravity="top|center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStylewhite_1">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWhichhyundai"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{carModelVM.carModelModel.txtWhichhyundai}"
+                        style="@style/txtPoppinssemibold22" tools:text="@string/msg_which_hyundai_model"/>
+                    <View android:id="@+id/viewView"
+                        android:layout_height="@dimen/_37pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_31pxv" android:layout_width="@dimen/_381pxh"/>
+                    <LinearLayout android:id="@+id/linearRowaccent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_32pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtAccent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtAccent}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_accent"/>
+                        <ImageView android:id="@+id/imageArrowrightOne"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_313pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesixOne"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout
+                        android:id="@+id/linearRowactiveitwent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtActiveitwenty"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtActiveitwenty}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_active_i20"/>
+                        <ImageView android:id="@+id/imageArrowright"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_294pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesixThree"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRowaura"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_17pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtAura"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtAura}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_aura"/>
+                        <ImageView android:id="@+id/imageArrowrightFive"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_329pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesixFive"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRowcreta"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtCreta"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtCreta}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_creta"/>
+                        <ImageView android:id="@+id/imageArrowright1"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_323pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesixSeven"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRowelantra"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtElantra"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtElantra}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_elantra"/>
+                        <ImageView android:id="@+id/imageArrowrightNine"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_313pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesixNine"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout
+                        android:id="@+id/linearRoweliteitwenty"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtEliteitwenty"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtEliteitwenty}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_elite_i20"/>
+                        <ImageView android:id="@+id/imageArrowright2"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_310pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesixEleven"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRoweon"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_17pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtEon"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtEon}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_eon"/>
+                        <ImageView android:id="@+id/imageArrowright3"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_337pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout
+                        android:id="@+id/linearRowfluidicelant"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFluidicelantra"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtFluidicelantra}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_fluidic_elantra"/>
+                        <ImageView android:id="@+id/imageArrowright4"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_264pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesixFifteen"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout
+                        android:id="@+id/linearRowfluidicverna"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_11pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFluidicverna"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtFluidicverna}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_fluidic_verna"/>
+                        <ImageView android:id="@+id/imageArrowright5"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_271pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix1"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRowgetz"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtGetz"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtGetz}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_getz"/>
+                        <ImageView android:id="@+id/imageArrowright6"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_331pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix2"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRowgetzprime"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtGetzprime"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtGetzprime}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_getz_prime"/>
+                        <ImageView android:id="@+id/imageArrowright7"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_287pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix3"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRowgrandeur"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_11pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtGrandeur"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtGrandeur}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_grandeur"/>
+                        <ImageView android:id="@+id/imageArrowright8"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_295pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix4"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRowarrowright"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_11pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtI10"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtI10}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_i10"/>
+                        <ImageView android:id="@+id/imageArrowright9"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_345pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix5"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearColumnarrowrigh"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1pxh"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearRowarrowright1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtI20"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtI20}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_i20"/>
+                        <ImageView android:id="@+id/imageArrowright10"
+                            android:layout_gravity="bottom"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_342pxh"
+                            android:layout_marginTop="@dimen/_3pxv"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix6"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginTop="@dimen/_17pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRownewcreta"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtNewcreta"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtNewcreta}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_new_creta"/>
+                        <ImageView android:id="@+id/imageArrowright11"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_289pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix7"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRowsantro"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSantro"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtSantro}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_santro"/>
+                        <ImageView android:id="@+id/imageArrowright12"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_316pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix8"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                    <LinearLayout android:id="@+id/linearRowvenue"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtVenue"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{carModelVM.carModelModel.txtVenue}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_venue"/>
+                        <ImageView android:id="@+id/imageArrowright13"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_317pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_100"
+                        android:id="@+id/lineLinesix9"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_405pxh"/>
+                </LinearLayout>
+            </FrameLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

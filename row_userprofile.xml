@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="userprofileRowModel" type="com.abdulsapplication.app.modules.sparepartslist.data.model.UserprofileRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearUserprofile"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStylewhite_2">
+        <ImageView android:id="@+id/imageWaterPumpImage"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_139pxh"
+            android:layout_width="@dimen/_148pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_screenshot_2021_11_16}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2021_11_16"/>
+        <View android:background="@color/blue_gray_100"
+            android:id="@+id/lineLinesixOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_1pxv"
+            android:layout_marginTop="@dimen/_5pxv" android:layout_width="@dimen/_194pxh"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtWaterPumpText"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{userprofileRowModel.txtWaterPumpText}"
+            style="@style/txtPoppinsmedium12" tools:text="@string/msg_dft_water_pump_aw4126"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtOmrText"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13pxh"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{userprofileRowModel.txtOmrText}"
+            style="@style/txtPoppinssemibold12" tools:text="@string/lbl_omr_187"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRow"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5pxv"
+            android:layout_marginTop="@dimen/_13pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:drawablePadding="@dimen/_6pxh"
+                android:drawableStart="@drawable/img_edit"
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnEditButton"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_28pxv"
+                android:layout_width="@dimen/_81pxh"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingEnd="@dimen/_24pxh"
+                android:paddingStart="@dimen/_11pxh"
+                android:paddingTop="@dimen/_5pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_edit"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_1" tools:text="@string/lbl_edit"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:drawablePadding="@dimen/_5pxh"
+                android:drawableStart="@drawable/img_delete"
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnDeleteButton"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_28pxv"
+                android:layout_marginStart="@dimen/_5pxh"
+                android:layout_width="@dimen/_81pxh"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingEnd="@dimen/_14pxh"
+                android:paddingStart="@dimen/_6pxh"
+                android:paddingTop="@dimen/_5pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_delete"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_2" tools:text="@string/lbl_delete"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

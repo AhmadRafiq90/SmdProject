@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="sparePartsListVM" type="com.abdulsapplication.app.modules.sparepartslist.data.viewmodel.SparePartsListVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnarrowDownOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyleamber_500">
+            <LinearLayout android:id="@+id/linearRowarrowdown"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12pxv"
+                android:layout_marginEnd="@dimen/_161pxh"
+                android:layout_marginStart="@dimen/_22pxh"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowdownOne"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_marginBottom="@dimen/_12pxv"
+                    android:layout_width="@dimen/_17pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_down"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSpareparts"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_122pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{sparePartsListVM.sparePartsListModel.txtSpareparts}"
+                    style="@style/txtPoppinssemibold18" tools:text="@string/lbl_spare_parts"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameStackrewindOne"
+            android:layout_height="@dimen/_757pxv" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="top|center"
+                android:layout_height="@dimen/_60pxh"
+                android:layout_width="@dimen/_426pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_rectangle_7}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_7"/>
+            <LinearLayout android:id="@+id/linearColumnrewind"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_13pxh"
+                android:paddingStart="@dimen/_13pxh"
+                android:paddingTop="@dimen/_17pxv" style="@style/groupStylewhite_1">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearRowrewindOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageRewindOne"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_marginTop="@dimen/_11pxv"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_rewind"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_rewind"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSearchspare"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_3pxv"
+                        android:layout_marginStart="@dimen/_21pxh"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{sparePartsListVM.sparePartsListModel.txtSearchspare}"
+                        style="@style/txtPoppinsregular14" tools:text="@string/msg_search_spare_parts"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:ellipsize="end" android:gravity="center"
+                        android:id="@+id/btnAddSpareParts"
+                        android:layout_height="@dimen/_35pxv"
+                        android:layout_marginStart="@dimen/_77pxh"
+                        android:layout_width="@dimen/_149pxh"
+                        android:paddingBottom="@dimen/_7pxv"
+                        android:paddingEnd="@dimen/_17pxh"
+                        android:paddingStart="@dimen/_17pxh"
+                        android:paddingTop="@dimen/_7pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_add_spare_parts"
+                        android:textAllCaps="false"
+                        style="@style/btnSolidRounded" tools:text="@string/lbl_add_spare_parts"/>
+                </LinearLayout>
+                <View android:background="@color/blue_gray_100"
+                    android:id="@+id/lineLinesixOne"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginTop="@dimen/_17pxv" android:layout_width="@dimen/_398pxh"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerUserprofile"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_35pxv"
+                    android:layout_marginTop="@dimen/_30pxv"
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_10pxh}"
+                    tools:itemCount="4" tools:listitem="@layout/row_userprofile"/>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:id="@+id/linearColumn"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/_26pxh" android:paddingStart="@dimen/_26pxh">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowhomehomealt"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_5pxh"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_A700">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnhomehomea"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageHomehomealtOne"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_marginStart="@dimen/_2pxh"
+                        android:layout_width="@dimen/_30pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_home_home_alt_fill"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_home_home_alt_fill"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtHome"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{sparePartsListVM.sparePartsListModel.txtHome}"
+                        style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_home"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnwheelone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageWheeloneOne"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_width="@dimen/_30pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_wheel_1"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_wheel_1"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSparepartsOne"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_9pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{sparePartsListVM.sparePartsListModel.txtSparepartsOne}"
+                        style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_spare_parts"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumncloseOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_gray_600_radius_15"
+                        android:id="@+id/btnCloseOne"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_marginStart="@dimen/_6pxh"
+                        android:layout_width="@dimen/_30pxh"
+                        android:paddingHorizontal="@dimen/_6pxh"
+                        android:paddingVertical="@dimen/_6pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_close" tools:ignore="ContentDescription"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtRequest"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_9pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{sparePartsListVM.sparePartsListModel.txtRequest}"
+                        style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_request"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumncarrepair"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageCarrepairone"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_width="@dimen/_30pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_car_repair_1"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_car_repair_1"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWorkshop"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{sparePartsListVM.sparePartsListModel.txtWorkshop}"
+                        style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_workshop"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearColumnbubblecha"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <FrameLayout android:id="@+id/frameStackbubblechat"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_30pxv" android:layout_width="@dimen/_30pxh">
+                        <ImageView android:id="@+id/imageBubblechatone"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_30pxh"
+                            android:layout_width="@dimen/_30pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bubble_chat_1"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_bubble_chat_1"/>
+                        <ImageView android:id="@+id/imageBubblechatone1"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_30pxh"
+                            android:layout_width="@dimen/_30pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bubble_chat_1_30x30"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_bubble_chat_1_30x30"/>
+                    </FrameLayout>
+                    <FrameLayout android:id="@+id/frameStackchats"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_18pxv"
+                        android:layout_marginTop="@dimen/_7pxv" android:layout_width="@dimen/_36pxh">
+                        <TextView android:ellipsize="end"
+                            android:gravity="top|start"
+                            android:id="@+id/txtChats"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{sparePartsListVM.sparePartsListModel.txtChats}"
+                            style="@style/txtPoppinsmedium12_2" tools:text="@string/lbl_chats"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="top|start"
+                            android:id="@+id/txtChatsOne"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{sparePartsListVM.sparePartsListModel.txtChatsOne}"
+                            style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_chats"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

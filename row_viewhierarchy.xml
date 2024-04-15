@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewhierarchyRowModel" type="com.abdulsapplication.app.modules.chatlist.data.model.ViewhierarchyRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearViewhierarchy"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowautopartstex"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageAutoPartsImage"
+                android:layout_height="@dimen/_53pxh"
+                android:layout_width="@dimen/_53pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_mask_group}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_mask_group"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnautoparts"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginStart="@dimen/_19pxh"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAutoPartsText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{viewhierarchyRowModel.txtAutoPartsText}"
+                    style="@style/txtPoppinsregular14_1" tools:text="@string/msg_reilly_auto_parts"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDummyText"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5pxv"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.05"
+                    android:singleLine="true"
+                    android:text="@{viewhierarchyRowModel.txtDummyText}"
+                    style="@style/txtRobotolight13" tools:text="@string/msg_lorem_ipsum_dummy"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameStacktimetext"
+            android:layout_height="@dimen/_55pxv"
+            android:layout_marginBottom="@dimen/_8pxv"
+            android:layout_marginStart="@dimen/_95pxh" android:layout_width="@dimen/_70pxh">
+            <TextView android:ellipsize="end"
+                android:gravity="top|start"
+                android:id="@+id/txtTimeText"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.05" android:singleLine="true"
+                android:text="@{viewhierarchyRowModel.txtTimeText}"
+                style="@style/txtRobotoregular15" tools:text="@string/lbl_08_43"/>
+            <ImageView android:id="@+id/imageTimeImage"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_55pxh"
+                android:layout_width="@dimen/_70pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_screenshot_2022_06_01}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot_2022_06_01"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

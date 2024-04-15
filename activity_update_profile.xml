@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="updateProfileVM" type="com.isapplication.app.modules.updateprofile.data.viewmodel.UpdateProfileVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameUpdateProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_group_129}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_group_129"/>
+        <LinearLayout android:id="@+id/linearColumnarrowdown"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_21pxv" android:paddingTop="@dimen/_21pxv">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearRowarrowdown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="@dimen/_22pxh" android:paddingStart="@dimen/_22pxh">
+                    <ImageView android:id="@+id/imageArrowdownOne"
+                        android:layout_height="@dimen/_15pxh"
+                        android:layout_marginBottom="@dimen/_7pxv"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="@dimen/_17pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_down"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtUpdateprofile"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_110pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{updateProfileVM.updateProfileModel.txtUpdateprofile}"
+                        style="@style/txtPoppinssemibold18" tools:text="@string/lbl_update_profile"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnname"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_62pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_32pxh" android:paddingStart="@dimen/_32pxh">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{updateProfileVM.updateProfileModel.txtName}"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_name"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_indigo_50_radius_5"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_muhammed_suhail"
+                    android:id="@+id/etName" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_15pxh"
+                    android:paddingStart="@dimen/_15pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@={updateProfileVM.updateProfileModel.etNameValue}"
+                    android:textColorHint="@color/indigo_100"
+                    style="@style/etRoundedOutline" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnemail"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_32pxh" android:paddingStart="@dimen/_32pxh">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{updateProfileVM.updateProfileModel.txtEmail}"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_email"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_indigo_50_radius_5"
+                    android:ellipsize="end"
+                    android:hint="@string/msg_suhail_greeniitc_com"
+                    android:id="@+id/etEmail" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_17pxv"
+                    android:paddingEnd="@dimen/_15pxh"
+                    android:paddingStart="@dimen/_15pxh"
+                    android:paddingTop="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@={updateProfileVM.updateProfileModel.etEmailValue}"
+                    android:textColorHint="@color/indigo_100"
+                    style="@style/etRoundedOutline" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMobile"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{updateProfileVM.updateProfileModel.txtMobile}"
+                style="@style/txtPoppinsmedium14" tools:text="@string/lbl_mobile"/>
+            <EditText
+                android:background="@drawable/rectangle_border_indigo_50_radius_5"
+                android:ellipsize="end"
+                android:hint="@string/lbl_968_12345678"
+                android:id="@+id/etMobilevalueOne"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_15pxh"
+                android:paddingStart="@dimen/_15pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@={updateProfileVM.updateProfileModel.etMobilevalueOneValue}"
+                android:textColorHint="@color/indigo_100"
+                style="@style/etRoundedOutline" tools:ignore="Autofill"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnUpdateProfile"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_40pxv"
+                android:layout_marginBottom="@dimen/_41pxv"
+                android:layout_marginTop="@dimen/_41pxv"
+                android:layout_width="@dimen/_144pxh"
+                android:paddingBottom="@dimen/_8pxv"
+                android:paddingEnd="@dimen/_15pxh"
+                android:paddingStart="@dimen/_15pxh"
+                android:paddingTop="@dimen/_8pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_update_profile"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_update_profile"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

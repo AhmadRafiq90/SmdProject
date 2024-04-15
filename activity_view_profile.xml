@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewProfileVM" type="com.isapplication.app.modules.viewprofile.data.viewmodel.ViewProfileVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameViewProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_group_129}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_group_129"/>
+        <LinearLayout android:id="@+id/linearColumnarrowdown"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_19pxv" android:paddingTop="@dimen/_19pxv">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearRowarrowdown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="@dimen/_22pxh" android:paddingStart="@dimen/_22pxh">
+                    <ImageView android:id="@+id/imageArrowdownOne"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_15pxh"
+                        android:layout_marginBottom="@dimen/_5pxv"
+                        android:layout_marginTop="@dimen/_6pxv"
+                        android:layout_width="@dimen/_17pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_down"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtProfile"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_146pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{viewProfileVM.viewProfileModel.txtProfile}"
+                        style="@style/txtPoppinssemibold18" tools:text="@string/lbl_profile"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <View android:id="@+id/viewView"
+                android:layout_height="@dimen/_142pxh" android:layout_width="@dimen/_43pxh"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtName"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_61pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{viewProfileVM.viewProfileModel.txtName}"
+                style="@style/txtPoppinsmedium14" tools:text="@string/lbl_name"/>
+            <EditText android:ellipsize="end"
+                android:hint="@string/lbl_muhammed_suhail"
+                android:id="@+id/etName" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_62pxh"
+                android:layout_marginStart="@dimen/_61pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@={viewProfileVM.viewProfileModel.etNameValue}"
+                android:textColorHint="@color/indigo_100"
+                style="@style/etPoppinsregular13" tools:ignore="Autofill"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtEmail"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_61pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{viewProfileVM.viewProfileModel.txtEmail}"
+                style="@style/txtPoppinsmedium14" tools:text="@string/lbl_email"/>
+            <EditText android:ellipsize="end"
+                android:hint="@string/lbl_muhammed_suhail"
+                android:id="@+id/etEmail" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_62pxh"
+                android:layout_marginStart="@dimen/_61pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@={viewProfileVM.viewProfileModel.etEmailValue}"
+                android:textColorHint="@color/indigo_100"
+                style="@style/etPoppinsregular13" tools:ignore="Autofill"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMobile"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_61pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{viewProfileVM.viewProfileModel.txtMobile}"
+                style="@style/txtPoppinsmedium14" tools:text="@string/lbl_mobile"/>
+            <EditText android:ellipsize="end"
+                android:hint="@string/lbl_muhammed_suhail"
+                android:id="@+id/etEmailvalueOne"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_62pxh"
+                android:layout_marginStart="@dimen/_61pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@={viewProfileVM.viewProfileModel.etEmailvalueOneValue}"
+                android:textColorHint="@color/indigo_100"
+                style="@style/etPoppinsregular13" tools:ignore="Autofill"/>
+            <View android:id="@+id/viewViewOne"
+                android:layout_height="@dimen/_202pxh" android:layout_width="@dimen/_144pxh"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnEditProfile"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_40pxv"
+                android:layout_width="@dimen/_144pxh"
+                android:paddingBottom="@dimen/_8pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_8pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_edit_profile"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_edit_profile"/>
+            <View android:id="@+id/viewViewTwo"
+                android:layout_height="@dimen/_211pxh" android:layout_width="@dimen/_144pxh"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
